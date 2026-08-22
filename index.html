@@ -135,6 +135,11 @@ button:disabled{opacity:.42;cursor:not-allowed}
 .tableau .n.dernier{background:radial-gradient(circle at 35% 28%, #ffc38a, var(--torche) 60%, #a8420f);
   color:#fff;box-shadow:0 0 22px #e0641faa}
 
+/* ---- lecteur de musique ---- */
+.musique iframe.spotify{display:block;width:100%;height:152px;border:0;border-radius:12px;
+  background:#ffffff08;min-height:152px}
+.musique .note{margin:12px 0 0;font-size:14px;line-height:1.5;color:var(--brume);text-align:center}
+
 /* ---- poste du Pere Fouras ---- */
 details.controle{background:linear-gradient(180deg,var(--pierre-2),#191610);
   border:1px solid #d8ab3426;border-radius:10px;overflow:hidden;box-shadow:0 20px 46px var(--ombre)}
@@ -209,6 +214,17 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:60}
       <div class="tableau" id="tableau"></div>
     </section>
   </div>
+
+  <section class="panneau musique">
+    <h2 class="titre-bloc">La musique du fort</h2>
+    <iframe class="spotify" title="Playlist Fort Boyard" style="border-radius:12px"
+      src="https://open.spotify.com/embed/playlist/0eE8uDaMn1bPKnXoUsCZUE?utm_source=generator"
+      width="100%" height="152" frameborder="0" loading="lazy"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      allowfullscreen></iframe>
+    <p class="note">Le lecteur a besoin d'une connexion. Hors ligne, ou si le cadre reste vide,
+      utilise le curseur « Ambiance du fort » — et laisse-le sur « coupée » quand Spotify joue.</p>
+  </section>
 
   <details class="controle">
     <summary>Le poste du Père Fouras <span class="chev">vérification des cartons — pour l'adulte qui anime</span></summary>
