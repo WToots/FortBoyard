@@ -620,7 +620,7 @@ function direLAnnonce(n, avant, apres){
     suite.push(CLIP_AMORCE(k));
   }
 
-  suite.push(CLIP_NUM(n), CLIP_NUM(n));         /* annonce puis repetition */
+  suite.push(CLIP_NUM(n));
 
   /* le commentaire : le fait marquant l'emporte toujours */
   const neuf = cle => apres.findIndex((e, i) => e[cle] > avant[i][cle]);
@@ -729,8 +729,8 @@ $('#volVoix').oninput = e => {
 };
 $('#tester').onclick = () => {
   Gong.frapper();
-  setTimeout(() => enchainer([CLIP_AMORCE(0), CLIP_NUM(25), CLIP_NUM(25),
-                              CLIP_ENFANT(0, 2)]), gongActif ? 420 : 0);
+  setTimeout(() => enchainer([CLIP_AMORCE(0), CLIP_NUM(25), CLIP_ENFANT(0, 2)]),
+             gongActif ? 420 : 0);
 };
 
 const jauge = $('#volVal');
